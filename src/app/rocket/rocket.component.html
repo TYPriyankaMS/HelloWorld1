@@ -1,0 +1,13 @@
+<p>
+  rocket works!
+</p>
+<!----{{rocketName}}-->
+{{name}}
+
+<button (click)="getData()">Get</button>
+<button (click)="postData()">Post</button>
+<button (click)="putData()">Put</button>
+<button (click)="deleteData()">Delete</button>
+<!--{{employeeData}}-->
+<ul>
+  <li *ngFor="let user of employeeData">{{user.first_name}}-{{user.email}}<img [src]="user.avatar"></li>

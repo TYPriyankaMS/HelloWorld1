@@ -1,0 +1,27 @@
+
+<p>
+  mobile-recharge works!
+</p>
+<pre>
+    <form [formGroup]="rechargeGroup">
+  mobileNumber:<input type="number" name="mobilenumber" formControlName="mobile" />
+  operator:<input type="text" name="operator" formControlName="operator"/>
+     <!-- <span *ngIf="rechargeGroup.get('operator').invalid && rechargeGroup.get('operator').touched">operator name is required</span>-->
+     <span style="color:red" *ngIf="rechargeGroup.get('operator').value==''&& rechargeGroup.get('operator').touched">
+       operator name is required
+     </span>
+     <span *ngIf="rechargeGroup.get('operator').invalid && rechargeGroup.get('operator').value!='' ">
+       operator name is altleast is 3char
+     </span>
+  Area:<input type="text" name="area" formControlName="area"/>
+  Amount:<input type="number" name="amount" formControlName="amount"/>
+  <span *ngIf="!rechargeGroup.get('amount').value && rechargeGroup.get('amount').touched">
+      amount is required
+    </span>
+    
+  <span *ngIf="rechargeGroup.get('amount').invalid && rechargeGroup.get('amount').value">amount must be atleat 50</span>
+  
+  <button>recharge</button>
+  <button>cancel</button>
+</form>
+</pre>

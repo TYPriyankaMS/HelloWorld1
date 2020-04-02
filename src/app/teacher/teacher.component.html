@@ -1,0 +1,6 @@
+<p>
+  teacher works!
+</p>
+ID:<input type="text" name="id" [(ngModel)]="id"/>
+{{id}}
+<app-student [task]="homeWork" (submit)="receive($event)"></app-student>

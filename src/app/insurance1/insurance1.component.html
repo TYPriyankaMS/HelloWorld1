@@ -1,0 +1,13 @@
+<p>
+  insurance1 works!
+</p>
+Name:<input type="text" name="name" class="form-control" placeholder="enter the name" [(ngModel)]="name" #firstName="ngModel"><br>
+<span *ngIf="firstName.touched && (firstName.pristine || firstName.value=='')">Name is required</span>
+  <span style="color: red" *ngIf="firstName.touched && firstName.dirty && firstName.value.length<3 && firstName.value!=''">name should content atleast 3 charecters</span>
+  
+tenure:<input type="text" name="tenure" placeholder="enter the tenure" class="form-control" [(ngModel)]="tenure" #year="ngModel"><br>
+<span *ngIf="year.touched==true && year.dirty &&  year.value.length<2">tenure is required</span>
+  
+Nominee:<input type="text" name="nominee" placeholder="enter the nominee"><br>
+Amount:<input type="number" name="amount"><br>
+<button name="submit" (click)="sendData()">submit</button>

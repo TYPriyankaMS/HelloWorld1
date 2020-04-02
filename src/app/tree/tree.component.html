@@ -1,0 +1,14 @@
+<p>
+  tree works! 
+</p>
+<button (click)="getFruit()">Get Fruit</button><!--event binding-->
+{{fruit}}
+<button [disabled]="off">disable the button</button><!--property binding-->
+<ul>
+    <li *ngFor="let tree of trees">{{tree}}</li><
+    <li *ngFor="let lap of laptops">{{lap.name}} {{lap.price}}</li>
+</ul>
+
+<span *ngIf="studentMarks>=35">passed</span>
+<button (click)="togglefunc()">toggle</button>
+<span *ngIf="toggle">{{name1}}</span>
